@@ -1,6 +1,7 @@
 resource "github_repository" "meetups" {
   name        = "meetups"
   description = "Repository or past meetup talks"
+  has_issues  = true
 }
 
 resource "github_team_repository" "core_meetups" {
