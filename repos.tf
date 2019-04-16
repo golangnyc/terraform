@@ -17,3 +17,12 @@ resource "github_team_repository" "contributors_meetups" {
 }
 
 
+data "github_repository" "terraform" {
+  full_name   = "golangnyc/terraform"
+}
+
+resource "github_team_repository" "core_terraform" {
+  team_id     = "${github_team.core.id}"
+  repository  = "${data.github_repository.terraform.name}"
+  permission  = "admin"
+}
