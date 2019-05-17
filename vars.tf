@@ -21,6 +21,7 @@ variable "contributors" {
       "marwan-at-work",
       "miguel250",
       "yurishkuro",
+      "grantseltzer",
       ]
 }
 
